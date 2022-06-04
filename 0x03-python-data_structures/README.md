@@ -2,4 +2,8 @@ Data Structures
 
 Sets
 
-Dictionary
+Dictionaries
+
+Lists
+
+Tuples
