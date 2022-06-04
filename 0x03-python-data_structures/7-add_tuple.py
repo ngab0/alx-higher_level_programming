@@ -13,3 +13,5 @@ def validate(tupol=()):
             tupol = (0, 0)
     elif len(tupol) > 2:
         tupol = (tupol[0], tupol[1])
+
+    return tupol
