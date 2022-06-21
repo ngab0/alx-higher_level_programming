@@ -3,6 +3,7 @@
 
 """Example Google style docstrings."""
 
+
 class Square:
     """ The summary line for a class docstring should fit on one line """
 
@@ -11,6 +12,7 @@ class Square:
 
         Args:
             size: length of a side
+
         """
         if type(size) != int:
             raise TypeError("size must be an integer")
