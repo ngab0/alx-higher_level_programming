@@ -1,14 +1,12 @@
 #!/usr/bin/node
 /* a script that computes and prints a factorial */
-function factorial (a) {
-  let factorial = 1;
-  if (isNaN(parseInt(a))  || parseInt(a) === 0) {
-    console.log(factorial);
+const n = parseInt(process.argv[2]);
+
+function factorial (n) {
+  if (isNaN(n)  || n === 0) {
+    return (1);
   } else {
-    for (let i = a; i > 0; i--) {
-      factorial *= i;
-    }
-    console.log(factorial);
+    return (n * factorial(n - 1));
   }
 }
-factorial(process.argv[2]);
+console.log(factorial(n));
