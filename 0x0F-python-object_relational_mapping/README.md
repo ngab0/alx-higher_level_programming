@@ -1,4 +1,8 @@
-Python - Object-relational mapping
+#Object-relational mapping
+
+In this project, I learnt to use Object Relational Mappers as a replacement of SQL.
+
+The SQLAlchemy python module was used
 
 0. Get all states
 1. Filter states
