@@ -1,18 +1,24 @@
 #!/usr/bin/node
-
 /*
-	gets the contents of webpage and stores it in a file
+    gets the contents of a webpage and stores it in a file
 */
-
 const request = require('request');
-const fs = require('fs');
 const url = process.argv[2];
-const filePath = process.argv[3];
+const fileName = process.argv[3];
+const fs = require('fs');
 
-request(url, function (err, response, body) {
-  if (err) {
-    console.log(err);
+function writeFile (nameFile, data) {
+  fs.writeFile(nameFile, data, 'utf8', (err) => {
+    if (err) {
+      return console.error(err);
+    }
+  });
+}
+
+request(url, function (error, response, body) {
+  if (error) {
+    console.log('code:', response.statusCode);
   } else {
-    fs.writeFile(filePath, body, 'utf-8');
+    writeFile(fileName, body);
   }
 });
