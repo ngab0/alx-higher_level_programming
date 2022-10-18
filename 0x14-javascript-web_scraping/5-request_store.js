@@ -1,5 +1,9 @@
 #!/usr/bin/node
 
+/*
+	gets the contents of webpage and stores it in a file
+*/
+
 const request = require('request');
 const fs = require('fs');
 const url = process.argv[2];
